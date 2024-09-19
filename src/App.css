@@ -1,38 +1,147 @@
-.App {
+/* General Form Editor Container Styles */
+.form-editor-container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+
+/* Theme Styles */
+.form-editor-container.light {
+  background-color: white;
+  color: black;
+}
+
+.form-editor-container.dark {
+  background-color: #333;
+  color: rgb(255, 0, 0);
+}
+
+
+
+
+
+
+
+.form-field:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-field label {
+  font-size: 14px;
+  margin-right: 20px;
+  flex-grow: 1;
+}
+
+.form-field input {
+  flex-grow: 2;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+
+
+/* Error Message Styling */
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Styles for Droppable Area */
+.dynamic-form {
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+}
+
+/* When dragging */
+.dragging {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field:hover {
+  background-color: #f0f0f0;
+}
+
+.form-field.dragging {
+  background-color: #dfe6e9;
+  border-color: #3498db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.file-uploader {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.dropzone {
+  padding: 20px;
+  border: 2px dashed #007bff;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.dropzone p {
+  margin: 0;
+  font-size: 16px;
+  color: #777;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.file-preview {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.file-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
